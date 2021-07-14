@@ -1,1 +1,11 @@
-<p>product-list works!</p>
+<h2>Our exotic pets</h2>
+
+<div *ngFor="let product of animals ; index as productId">
+ <h3>
+    <a routerLink="products/{{productId}}">{{ product.name }}</a> 
+ </h3>
+
+ <p *ngIf="product.description">
+    Description: {{ product.description }}
+    </p>
+</div>
