@@ -1,0 +1,22 @@
+<h3>Cart</h3>
+
+<hr>
+
+<div class="cart-item" *ngFor="let item of cart">
+
+    <span>{{item.name}}</span>
+    <span>{{item.price | currency}}</span>
+</div>
+<span>Total amount: {{this.total | currency}}</span>
+
+
+
+
+<form [formGroup]="checkOutForm" (ngSubmit)="onSubmit(checkOutForm.value)">
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="address">
+
+    <button class="btn btn-success" type="submit">Purschase</button>
+
+
+</form>

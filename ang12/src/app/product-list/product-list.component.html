@@ -1,0 +1,15 @@
+
+<h2>Products</h2>
+<hr>
+<div *ngFor="let val of products; index as id">
+
+ <h3>
+  <a routerLink="details/{{ id }}"> {{ id }}  {{ val.name }} </a>
+ 
+ </h3>
+
+ <p *ngIf = "val.description">
+     {{val.description}}
+ </p>
+
+</div>
